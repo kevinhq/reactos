@@ -6,6 +6,8 @@ tasks:
       cd /workspace/reactos/build &&
       mkdir -p /workspace/reactos/build/symbols/sdk/include/asm &&
       mkdir -p /workspace/reactos/build/symbols/symbols &&
+      mkdir -p /workspace/reactos/build/symbols/dll/win32/fusion/fusion_1_1/ &&
+      mkdir -p /workspace/reactos/build/symbols/dll/win32/fusion/fusion_2_0/ &&
       cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DGDB:BOOL=TRUE -DSEPARATE_DBG:BOOL=TRUE -D_WINKD_:BOOL=TRUE -DKDBG:BOOL=FALSE -DENABLE_ROSTESTS:BOOL=TRUE -DCMAKE_TOOLCHAIN_FILE=toolchain-gcc.cmake -G "Ninja" &&
       ninja xdk psdk 
     command: >
